@@ -137,8 +137,8 @@ This block defines geometry only; component styling remains separate.
   }
 
   .storefront .store-hero {
-    min-height: max-content;
-    aspect-ratio: var(--store-hero-ratio);
+    min-height: calc(min(var(--store-content-max), 100vw - 2 * var(--pad)) / (var(--store-hero-ratio)));
+    aspect-ratio: auto;
   }
 
   .storefront .store-hero-media {

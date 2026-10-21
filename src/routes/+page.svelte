@@ -1,6 +1,7 @@
 <script lang="ts">
   import '#lib/components/storefront/foundation.css';
   import { page } from '$app/state';
+  import Hero from '#lib/components/storefront/Hero.svelte';
   import Header from '#lib/components/storefront/Header.svelte';
   import CategoryNav from '#lib/components/storefront/CategoryNav.svelte';
   import Action from '#lib/components/storefront/Action.svelte';
@@ -28,8 +29,8 @@
 </script>
 
 <svelte:head>
-  <title>KOSMETIK — Fondasi A1</title>
-  <meta name="description" content="Pratinjau implementasi fondasi KOSMETIK A1: token, tata letak responsif, tombol, tautan, dan kontrol ikon." />
+  <title>KOSMETIK — Riasan simpel, cantik setiap hari.</title>
+  <meta name="description" content="Pratinjau implementasi fondasi KOSMETIK A1: token, tata letak responsif, tombol, kontrol ikon, header, dan hero kosmetik." />
 </svelte:head>
 
 <div class="storefront">
@@ -37,19 +38,8 @@
   <Header homeHref="/" accountHref="#catatan" wishlistHref="#catatan" cartHref="#catatan" searchAction="/#hasil-pratinjau" {query} />
   <CategoryNav items={categories} active={activeCategory.id} />
   <main id="fondasi" class="store-container">
-    <p id="hasil-pratinjau" class="preview-status" role="status">{query.trim() ? `Pencarian: “${query}”. Ini pratinjau field; hasil produk belum terhubung.` : 'Pratinjau komponen A1 · T01–T07. Cari produk dengan mengetik, lalu tekan Enter.'}</p>
-    <section class="intro store-section">
-      <div>
-        <h1>Fondasi untuk<br />cantik setiap hari.</h1>
-        <p>Komposisi A1, satu bahasa visual. Token, tata letak, dan kontrol bersama untuk membangun KOSMETIK.</p>
-        <Action href="#aksi" arrow>Lihat komponen</Action>
-      </div>
-      <aside aria-label="Lingkup implementasi">
-        <h2>Mulai dari yang mendasar.</h2>
-        <p>T01–T07 tersedia di halaman ini. Header, pencarian, dan navigasi kategori siap dirangkai dengan katalog dan fotografi pada tugas berikutnya.</p>
-        <Action href="#tata-letak" variant="secondary">Periksa tata letak</Action>
-      </aside>
-    </section>
+    <Hero shopHref="?kategori=semua#tata-letak" />
+    <p id="hasil-pratinjau" class="preview-status" role="status">{query.trim() ? `Pencarian: “${query}”. Ini pratinjau field; hasil produk belum terhubung.` : 'Pratinjau komponen A1 · T01–T09. Cari produk dengan mengetik, lalu tekan Enter.'}</p>
 
     <section class="store-section" aria-labelledby="token-title">
       <div class="section-heading"><h2 id="token-title">Token & tipografi</h2><p>T01 · Fondasi netral, aksen emerald.</p></div>
@@ -101,8 +91,8 @@
     </section>
     <footer id="catatan" class="store-section">
       <h2>Fondasi siap dirangkai.</h2>
-      <p>Pratinjau T01–T07. Kontrol akun, wishlist, dan keranjang di header mengarah ke catatan ini; integrasi belum tersedia. Favorit hanya disimpan selama halaman terbuka.</p>
-      <p>Rasio gambar ditampilkan sebagai contoh tata letak. Foto produk dan bagian homepage A1 dikerjakan pada tugas berikutnya.</p>
+      <p>Pratinjau T01–T09. Kontrol akun, wishlist, dan keranjang di header mengarah ke catatan ini; integrasi belum tersedia. Favorit hanya disimpan selama halaman terbuka.</p>
+      <p>Rasio gambar ditampilkan sebagai contoh tata letak. Hero memakai gambar hasil generasi AI. Katalog dan bagian homepage A1 lainnya dikerjakan pada tugas berikutnya.</p>
       <a class="wordmark" href="#fondasi">KOSMETIK</a>
     </footer>
   </main>
@@ -113,10 +103,6 @@
   .category-status { margin-bottom: var(--gap); color: var(--muted); }
   .wordmark { font-size: var(--fs-title); font-weight: 700; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
   .section-heading p, .note, footer p, .swatch-caption span, .type-sample > span { color: var(--muted); }
-  .intro { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--pad); background: var(--raised); border-radius: var(--radius-card); padding: var(--pad); }
-  h1 { font-size: var(--store-display-size); font-weight: 700; line-height: 1.05; letter-spacing: -0.035em; }
-  .intro p { max-width: 48ch; margin-block: var(--pad); }
-  .intro aside { align-self: end; padding: var(--card-pad); background: var(--surface); border-radius: var(--radius-card); }
   h2 { font-size: var(--fs-title); line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; }
   h3 { font-size: var(--fs-section); font-weight: 600; }
   .section-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: var(--gap); margin-bottom: var(--pad); }
@@ -143,5 +129,4 @@
   footer .wordmark { margin-top: var(--pad); width: fit-content; }
   .skip-link { position: absolute; left: var(--pad); top: var(--pad); padding: var(--gap); background: var(--surface); color: var(--text); transform: translateY(-200%); z-index: 1; }
   .skip-link:focus { transform: none; }
-  @media (max-width: 767px) { .intro { grid-template-columns: minmax(0, 1fr); } }
 </style>

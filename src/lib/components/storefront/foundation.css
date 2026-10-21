@@ -76,7 +76,7 @@
   .storefront :is(.store-product-grid, .store-category-grid) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .storefront :is(.store-hero, .store-newsletter) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .storefront .store-promo { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
-  .storefront .store-hero { min-height: max-content; aspect-ratio: var(--store-hero-ratio); }
+  .storefront .store-hero { min-height: calc(min(var(--store-content-max), 100vw - 2 * var(--pad)) / (var(--store-hero-ratio))); aspect-ratio: auto; }
   .storefront .store-hero-media { aspect-ratio: auto; position: relative; }
   .storefront .store-hero-media img { position: absolute; inset: 0; }
 }

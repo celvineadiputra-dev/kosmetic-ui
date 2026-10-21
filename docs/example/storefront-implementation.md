@@ -97,3 +97,17 @@ fallback, one header landmark, accessible action names, search label association
 native GET submission markup, long query retention, and escaping. These HTTP
 checks do not substitute for keyboard or visual browser checks. The inspector
 was retried and still cannot launch: no Chrome/Edge/Chromium executable is present.
+
+## T08–T09 runtime continuation
+
+`Hero.svelte` now renders the A1 introduction, exact heading/description, one
+shared CTA, and generated local cosmetics photography. See
+[hero delivery and review](./storefront-hero.md) for the generation prompt, asset
+provenance, responsive behavior, ratio-height correction, and final critique.
+The reference direction is explicitly A1; no random direction or seed was used.
+
+The browser availability issue was resolved for this task by locating Brave and
+setting `CHROME_PATH`. Final hero geometry passes at five widths (320–1440px),
+and desktop/tablet/mobile screenshots were reviewed. The generic inspector passes
+with the specific task exceptions and remaining warnings listed in the hero notes.
+Build and Svelte checks pass. T10–T26 remain separate work.

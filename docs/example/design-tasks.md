@@ -5,7 +5,7 @@
 - [A1.png](./A1.png): sans-serif typography, rounded inset hero and promotional banner, warm cream imagery, emerald actions.
 - [A2.png](./A2.png): editorial serif headings and wordmark, full-width hero and promotional banner, dark green actions, flatter edges.
 - Both references depict an Indonesian cosmetics homepage named **KOSMETIK**.
-- This is a component design backlog. T01–T07 now have runtime implementations; backend integrations and remaining components are separate work.
+- This is a component design backlog. T01–T09 now have runtime implementations; backend integrations and remaining components are separate work.
 - Use [app.css](../../.agents/skills/design-taste-frontend/assets/app.css) as the source of truth for design tokens. Choose A1 or A2 for composition, content, image placement, and section order.
 - Mobile layouts and interactive states below are proposed requirements: the references show desktop layouts only.
 - Where screenshot styling or a task below conflicts with `app.css`, the token mapping below takes precedence. Screenshot color and type descriptions record the references, not required overrides.
@@ -106,15 +106,17 @@ Header → category navigation → hero → favorite products → category disco
 
 ### T08 — Design the hero text block
 
-- [ ] A1: include the small introductory label, “Riasan simpel, cantik setiap hari.” heading, description, and “Belanja Sekarang” CTA.
+- [x] A1: include the small introductory label, “Riasan simpel, cantik setiap hari.” heading, description, and “Belanja Sekarang” CTA.
 - [ ] A2: include “Cantik dengan caramu sendiri.” heading, description, “Temukan Favoritmu” CTA, and “Lihat koleksi baru” secondary link.
+- **Delivery:** [T08 hero copy](./storefront-hero.md#t08--hero-copy), implemented in `Hero.svelte` with A1 copy and the shared CTA. A2 is not selected.
 - **Done when:** line breaks and text width resemble the chosen reference, with one clear primary action.
 - **Dependencies:** T01, T03.
 
 ### T09 — Design the hero media and composition
 
-- [ ] Place warm cosmetics photography to the right while preserving readable space behind the left-hand text.
-- [ ] A1: use an inset rounded banner. A2: use a full-width image section with a taller editorial heading.
+- [x] Place warm cosmetics photography to the right while preserving readable space behind the left-hand text.
+- [x] A1: use an inset rounded banner. A2: use a full-width image section with a taller editorial heading.
+- **Delivery:** [T09 hero media](./storefront-hero.md#t09--hero-photograph-and-composition), implemented with a generated local still life and the responsive T02 inset split.
 - **Done when:** products remain visible at desktop and mobile sizes, and text never loses contrast over the image.
 - **Dependencies:** T02, T08; suitable source imagery.
 

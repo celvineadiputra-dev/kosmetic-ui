@@ -5,7 +5,7 @@
 - [A1.png](./A1.png): sans-serif typography, rounded inset hero and promotional banner, warm cream imagery, emerald actions.
 - [A2.png](./A2.png): editorial serif headings and wordmark, full-width hero and promotional banner, dark green actions, flatter edges.
 - Both references depict an Indonesian cosmetics homepage named **KOSMETIK**.
-- This is a component design backlog. T01–T16 now have runtime implementations; backend integrations and remaining components are separate work.
+- This is a component design backlog. T01–T19 now have runtime implementations; backend integrations and remaining components are separate work.
 - Use [app.css](../../.agents/skills/design-taste-frontend/assets/app.css) as the source of truth for design tokens. Choose A1 or A2 for composition, content, image placement, and section order.
 - Mobile layouts and interactive states below are proposed requirements: the references show desktop layouts only.
 - Where screenshot styling or a task below conflicts with `app.css`, the token mapping below takes precedence. Screenshot color and type descriptions record the references, not required overrides.
@@ -183,25 +183,29 @@ Header → category navigation → hero → favorite products → category disco
 
 ### T17 — Design the category tile
 
-- [ ] Support Wajah, Bibir, Mata, and Brush & Tools with matching category imagery.
-- [ ] A1: image above a centered label strip. A2: label and arrow above the image, with subtle vertical separators between tiles.
+- [x] Support Wajah, Bibir, Mata, and Brush & Tools with matching category imagery.
+- [x] A1: image above a centered label strip. A2: label and arrow above the image, with subtle vertical separators between tiles.
+- **Delivery:** [Runtime and review](./storefront-discovery-promo.md#t17--category-tile). `CategoryTile.svelte`: one accessible whole-tile link, 4:3 media, centered label strip, focus/selection states.
 - **Done when:** the entire tile has one clear link target and labels remain readable across sizes.
 - **Dependencies:** T01–T03; suitable source imagery.
 
 ### T18 — Assemble category discovery
 
-- [ ] Add A1's “Temukan Favoritmu” title/subtitle or A2's “Mulai dari yang kamu suka.” heading.
-- [ ] Arrange four category tiles in one desktop row and a two-column narrow-screen grid.
+- [x] Add A1's “Temukan Favoritmu” title/subtitle or A2's “Mulai dari yang kamu suka.” heading.
+- [x] Arrange four category tiles in one desktop row and a two-column narrow-screen grid.
+- **Delivery:** [Runtime and review](./storefront-discovery-promo.md#t18--category-discovery). `CategoryDiscovery.svelte`: shared heading and Wajah/Bibir/Mata/Brush & Tools grid, four desktop and two compact columns.
 - **Done when:** categories appear in the reference order and use one consistent tile treatment.
 - **Dependencies:** T02, T17.
 
 ### T19 — Design the promotional split banner
 
-- [ ] A1: cosmetics still life on the left; cream text panel with “Tampil natural, setiap hari.” and “Jelajahi Koleksi” CTA on the right.
-- [ ] A2: beauty portrait on the left; pale green panel with “Sedikit riasan. Banyak percaya diri.” and “Eksplorasi Natural Look” CTA on the right.
-- [ ] Define a stacked narrow-screen composition with readable heading, description, and button.
+- [x] A1: cosmetics still life on the left; cream text panel with “Tampil natural, setiap hari.” and “Jelajahi Koleksi” CTA on the right.
+- [ ] A2: beauty portrait on the left; pale green panel with “Sedikit riasan. Banyak percaya diri.” and “Eksplorasi Natural Look” CTA on the right. **Not applicable to selected A1.**
+- [x] Define a stacked narrow-screen composition with readable heading, description, and button.
+- **Delivery:** [Runtime and review](./storefront-discovery-promo.md#t19--promotional-split-banner). `PromoBanner.svelte`: generated local WebP still life, neutral copy panel, shared CTA, desktop 60/40 and stacked compact layout.
 - **Done when:** the image and text panels have balanced proportions and follow the reference's inset/full-width treatment.
 - **Dependencies:** T02, T03; suitable source imagery.
+
 
 ## Supporting section tasks
 

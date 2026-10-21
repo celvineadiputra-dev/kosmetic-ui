@@ -131,3 +131,19 @@ rating names, and no horizontal overflow or nested controls. Generic inspector
 exceptions and remaining foundation warnings are recorded in the product notes.
 T17–T26 remain separate work; discovery/promotion can be inserted between favorites
 and arrivals without changing the shared product components.
+
+## T17–T19 runtime continuation
+
+CategoryTile, CategoryDiscovery, and PromoBanner now fill the reference sequence
+between favorites and arrivals. Four category images reuse the existing product
+WebP assets; the new promotional still life is a 119 KiB local WebP generated with
+built-in imagegen. See [discovery/promotion delivery](./storefront-discovery-promo.md)
+for the three task contracts, asset paths and prompt, and review evidence.
+
+Svelte checks, build, and targeted source lint pass. Browser geometry passes at
+six widths (320–1440px), including section order, tile link semantics, selected
+category URL, image ratios, 60/40/stacked promotion, two-line title, valid CTA, and
+zero horizontal overflow. Desktop/tablet/mobile screenshots were reviewed; generic
+inspector exceptions and existing warnings are recorded in the delivery notes.
+T20–T26 remain separate work. Existing foundation specimens and user changes
+outside these components are preserved.

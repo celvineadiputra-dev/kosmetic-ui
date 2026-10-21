@@ -2,8 +2,8 @@
 
 Status: runtime implemented. The `/` route now orders header → category navigation
 → hero → Pilihan Favorit → Baru untuk Kamu → existing foundation specimens.
-Discovery and promotion will be inserted between the two product sections in
-T17–T19. A2 styling and filter tabs are not selected.
+Discovery and promotion are now inserted between the two product sections by
+[T17–T19](./storefront-discovery-promo.md). A2 styling and filter tabs are not selected.
 
 ## T10 — Section heading
 

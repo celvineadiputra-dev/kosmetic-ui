@@ -5,7 +5,7 @@
 - [A1.png](./A1.png): sans-serif typography, rounded inset hero and promotional banner, warm cream imagery, emerald actions.
 - [A2.png](./A2.png): editorial serif headings and wordmark, full-width hero and promotional banner, dark green actions, flatter edges.
 - Both references depict an Indonesian cosmetics homepage named **KOSMETIK**.
-- This is a component design backlog. T01–T09 now have runtime implementations; backend integrations and remaining components are separate work.
+- This is a component design backlog. T01–T16 now have runtime implementations; backend integrations and remaining components are separate work.
 - Use [app.css](../../.agents/skills/design-taste-frontend/assets/app.css) as the source of truth for design tokens. Choose A1 or A2 for composition, content, image placement, and section order.
 - Mobile layouts and interactive states below are proposed requirements: the references show desktop layouts only.
 - Where screenshot styling or a task below conflicts with `app.css`, the token mapping below takes precedence. Screenshot color and type descriptions record the references, not required overrides.
@@ -124,52 +124,60 @@ Header → category navigation → hero → favorite products → category disco
 
 ### T10 — Design the section heading row
 
-- [ ] Create a reusable title row with an optional subtitle and right-aligned “Lihat Semua” or “Jelajahi semua” link.
-- [ ] Support A1's compact sans-serif title/subtitle and A2's large serif heading.
+- [x] Create a reusable title row with an optional subtitle and right-aligned “Lihat Semua” or “Jelajahi semua” link.
+- [x] Support A1's compact sans-serif title/subtitle and A2's large serif heading.
+- **Delivery:** [Runtime and review](./storefront-products.md#t10--section-heading). `SectionHeading.svelte`: optional subtitle/link, wrapped row, shared Action; A1 Inter treatment selected.
 - **Done when:** the same component supports favorites and new arrivals, including a wrapped narrow-screen layout.
 - **Dependencies:** T01–T03.
 
 ### T11 — Design the product image tile
 
-- [ ] Define consistent image crops and warm product photography across lipstick, cushion, blush, pencil, palette, mascara, powder, and brushes.
-- [ ] Include the top-right wishlist overlay for A2; A1 has plain product images.
+- [x] Define consistent image crops and warm product photography across lipstick, cushion, blush, pencil, palette, mascara, powder, and brushes.
+- [x] Include the top-right wishlist overlay for A2; A1 has plain product images.
+- **Delivery:** [Runtime and review](./storefront-products.md#t11--product-media). Shared media in `ProductCard.svelte` and eight locally generated WebP assets; A1 omits overlays.
 - **Done when:** tiles align across each row, product details are not awkwardly cropped, and optional controls remain visible.
 - **Dependencies:** T01, T04; suitable source imagery.
 
 ### T12 — Design product information
 
-- [ ] Place product name, shade/variant details, and bold Indonesian rupiah price below the image.
-- [ ] Use the pictured information hierarchy, for example Velvet Matte Lipstick → Rose Nude · 6 warna → Rp89.000.
+- [x] Place product name, shade/variant details, and bold Indonesian rupiah price below the image.
+- [x] Use the pictured information hierarchy, for example Velvet Matte Lipstick → Rose Nude · 6 warna → Rp89.000.
+- **Delivery:** [Runtime and review](./storefront-products.md#t12--product-information). Typed reference data in `products.ts` and shared name/variant/price markup with aligned grid tracks.
 - **Done when:** longer names wrap cleanly and adjacent cards retain a consistent visual rhythm.
 - **Dependency:** T01.
 
 ### T13 — Design the rating row
 
-- [ ] Add a gold star, decimal-comma rating, and review count, such as “4,8 (128)”.
-- [ ] Make ratings optional: the pictured favorites have them; new arrivals do not.
+- [x] Add a gold star, decimal-comma rating, and review count, such as “4,8 (128)”.
+- [x] Make ratings optional: the pictured favorites have them; new arrivals do not.
+- **Delivery:** [Runtime and review](./storefront-products.md#t13--rating). `Rating.svelte`: optional gold star, locale-formatted score/count, accessible equivalent; reference data only.
 - **Done when:** the rating has a readable text equivalent and its omission leaves no empty placeholder row.
 - **Dependency:** T01.
 
 ### T14 — Assemble the reusable product card
 
-- [ ] Combine image, information, optional rating, and optional wishlist into one component.
-- [ ] Specify product-link focus/hover styling and keep the wishlist action separate from the product link.
+- [x] Combine image, information, optional rating, and optional wishlist into one component.
+- [x] Specify product-link focus/hover styling and keep the wishlist action separate from the product link.
+- **Delivery:** [Runtime and review](./storefront-products.md#t14--reusable-card). `ProductCard.svelte`: one product link, optional sibling favorite control, hover/focus states, all eight products.
 - **Done when:** the card supports every pictured product without a separate layout per item.
 - **Dependencies:** T11–T13.
 
 ### T15 — Design the favorites section
 
-- [ ] Combine the heading row and four product cards: lipstick, cushion, blush, and brow pencil.
-- [ ] A2 only: add Semua, Wajah, Bibir, and Mata filter tabs with an underlined active state; define the no-results appearance for filtering.
+- [x] Combine the heading row and four product cards: lipstick, cushion, blush, and brow pencil.
+- [ ] A2 only: add Semua, Wajah, Bibir, and Mata filter tabs with an underlined active state; define the no-results appearance for filtering. **Not applicable to the selected A1 composition.**
+- **Delivery:** [Runtime and review](./storefront-products.md#t15--pilihan-favorit). `ProductSection.svelte` renders four favorites with ratings; A2-only filter tabs are not applicable.
 - **Done when:** the four-column desktop row matches the selected reference and tabs have a documented selection state.
 - **Dependencies:** T02, T10, T14.
 
 ### T16 — Design the new-arrivals section
 
-- [ ] Reuse the heading row and product cards for eyeshadow palette, mascara, loose powder, and brush set.
-- [ ] Use A1's “Baru untuk Kamu” or A2's “Baru, untuk kamu” heading treatment and omit ratings as pictured.
+- [x] Reuse the heading row and product cards for eyeshadow palette, mascara, loose powder, and brush set.
+- [x] Use A1's “Baru untuk Kamu” or A2's “Baru, untuk kamu” heading treatment and omit ratings as pictured.
+- **Delivery:** [Runtime and review](./storefront-products.md#t16--baru-untuk-kamu). The same section/card components render four new arrivals without rating slots.
 - **Done when:** the section uses the shared components and keeps image and price alignment consistent.
 - **Dependencies:** T02, T10, T14.
+
 
 ## Discovery and promotional tasks
 

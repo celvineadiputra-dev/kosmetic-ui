@@ -1,6 +1,8 @@
 <script lang="ts">
   import '#lib/components/storefront/foundation.css';
   import { page } from '$app/state';
+  import ProductSection from '#lib/components/storefront/ProductSection.svelte';
+  import { favorites, newArrivals } from '#lib/components/storefront/products.js';
   import Hero from '#lib/components/storefront/Hero.svelte';
   import Header from '#lib/components/storefront/Header.svelte';
   import CategoryNav from '#lib/components/storefront/CategoryNav.svelte';
@@ -13,6 +15,7 @@
     { id: 'tools', label: 'Brush & Tools' }, { id: 'promo', label: 'Promo' }
   ].map((item) => ({ ...item, href: `?kategori=${item.id}#tata-letak` }));
   let activeCategory = $derived(categories.find((item) => item.id === page.url.searchParams.get('kategori')) ?? categories[0]);
+  let selectedProduct = $derived([...favorites, ...newArrivals].find((product) => product.id === page.url.searchParams.get('produk')));
   let query = $derived(page.url.searchParams.get('q') ?? '');
   let favorite = $state(false);
   let submitted = $state(false);
@@ -38,8 +41,13 @@
   <Header homeHref="/" accountHref="#catatan" wishlistHref="#catatan" cartHref="#catatan" searchAction="/#hasil-pratinjau" {query} />
   <CategoryNav items={categories} active={activeCategory.id} />
   <main id="fondasi" class="store-container">
-    <Hero shopHref="?kategori=semua#tata-letak" />
-    <p id="hasil-pratinjau" class="preview-status" role="status">{query.trim() ? `Pencarian: “${query}”. Ini pratinjau field; hasil produk belum terhubung.` : 'Pratinjau komponen A1 · T01–T09. Cari produk dengan mengetik, lalu tekan Enter.'}</p>
+    <Hero shopHref="#koleksi" />
+    <div id="koleksi" class="store-section catalog">
+      <ProductSection id="favorit" title="Pilihan Favorit" subtitle="Kosmetik esensial untuk setiap hari." products={favorites} />
+      <ProductSection id="baru" title="Baru untuk Kamu" subtitle="Lengkapi koleksi riasanmu." products={newArrivals} />
+    </div>
+    <p id="catatan-produk" class="product-preview-note" role="status">{selectedProduct ? `${selectedProduct.name} dipilih. Ini data contoh A1; detail produk dan checkout belum terhubung.` : 'Koleksi pratinjau A1. Foto hasil AI; harga, varian, rating, dan jumlah ulasan adalah contoh dari referensi, bukan data toko aktif.'}</p>
+    <p id="hasil-pratinjau" class="preview-status" role="status">{query.trim() ? `Pencarian: “${query}”. Ini pratinjau field; hasil produk belum terhubung.` : 'Pratinjau komponen A1 · T01–T16. Cari produk dengan mengetik, lalu tekan Enter.'}</p>
 
     <section class="store-section" aria-labelledby="token-title">
       <div class="section-heading"><h2 id="token-title">Token & tipografi</h2><p>T01 · Fondasi netral, aksen emerald.</p></div>
@@ -91,14 +99,16 @@
     </section>
     <footer id="catatan" class="store-section">
       <h2>Fondasi siap dirangkai.</h2>
-      <p>Pratinjau T01–T09. Kontrol akun, wishlist, dan keranjang di header mengarah ke catatan ini; integrasi belum tersedia. Favorit hanya disimpan selama halaman terbuka.</p>
-      <p>Rasio gambar ditampilkan sebagai contoh tata letak. Hero memakai gambar hasil generasi AI. Katalog dan bagian homepage A1 lainnya dikerjakan pada tugas berikutnya.</p>
+      <p>Pratinjau T01–T16. Kontrol akun, wishlist, dan keranjang di header mengarah ke catatan ini; integrasi belum tersedia. Favorit hanya disimpan selama halaman terbuka.</p>
+      <p>Rasio gambar ditampilkan sebagai contoh tata letak. Hero dan foto produk memakai gambar hasil generasi AI. Bagian discovery, promosi, dan pendukung homepage A1 dikerjakan pada tugas berikutnya.</p>
       <a class="wordmark" href="#fondasi">KOSMETIK</a>
     </footer>
   </main>
 </div>
 
 <style>
+  .catalog, .product-preview-note { scroll-margin-top: var(--pad); }
+  .product-preview-note { margin-top: var(--gap); color: var(--muted); overflow-wrap: anywhere; }
   .preview-status { padding-block: var(--pad); color: var(--muted); overflow-wrap: anywhere; scroll-margin-top: var(--pad); }
   .category-status { margin-bottom: var(--gap); color: var(--muted); }
   .wordmark { font-size: var(--fs-title); font-weight: 700; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }

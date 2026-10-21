@@ -111,3 +111,23 @@ setting `CHROME_PATH`. Final hero geometry passes at five widths (320–1440px),
 and desktop/tablet/mobile screenshots were reviewed. The generic inspector passes
 with the specific task exceptions and remaining warnings listed in the hero notes.
 Build and Svelte checks pass. T10–T26 remain separate work.
+
+## T10–T16 runtime continuation
+
+The preview now includes reusable SectionHeading, ProductCard, Rating, and
+ProductSection components, typed reference product data, four favorites with
+ratings, and four arrivals without ratings. See [product delivery and asset
+prompts](./storefront-products.md) for each task's contract, sample-data limits,
+eight local WebP image assets, and browser review.
+
+Hero shopping and section-level collection links now target the eight-item
+collection region. Product links retain selection in the URL and open a labeled
+preview note. Full detail pages and checkout remain outside scope.
+
+Final verification: Svelte checks and production build pass; inspector screenshots
+at 1440/768/390px reviewed; focused browser checks at 320/390/767/768/860/1440px
+confirm columns, image ratios/assets, price alignment, rating omission, accessible
+rating names, and no horizontal overflow or nested controls. Generic inspector
+exceptions and remaining foundation warnings are recorded in the product notes.
+T17–T26 remain separate work; discovery/promotion can be inserted between favorites
+and arrivals without changing the shared product components.

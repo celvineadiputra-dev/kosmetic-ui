@@ -147,3 +147,18 @@ zero horizontal overflow. Desktop/tablet/mobile screenshots were reviewed; gener
 inspector exceptions and existing warnings are recorded in the delivery notes.
 T20–T26 remain separate work. Existing foundation specimens and user changes
 outside these components are preserved.
+
+## T20–T24 runtime continuation
+
+ServiceBenefits, NewsletterForm, NewsletterSection, and StoreFooter complete the
+A1 homepage section order. Foundation specimens were preserved at `/komponen`,
+which also provides a local success/failure newsletter fixture. See [supporting
+sections and footer delivery](./storefront-support-footer.md) for each task's
+contract, state behavior, verification, and unresolved integration.
+
+Svelte checks/build/source lint pass. Six-width browser geometry and final
+screenshots were reviewed. No live newsletter adapter or approved social handles
+were supplied; the homepage does not invent a successful signup or official
+account URL. Policy/help links open explicit local unavailable-content notes.
+The in-app browser could not open its interaction tab, so interactive form and
+screen-reader acceptance remain unclaimed. T25/T26 are still pending.

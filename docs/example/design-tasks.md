@@ -5,7 +5,7 @@
 - [A1.png](./A1.png): sans-serif typography, rounded inset hero and promotional banner, warm cream imagery, emerald actions.
 - [A2.png](./A2.png): editorial serif headings and wordmark, full-width hero and promotional banner, dark green actions, flatter edges.
 - Both references depict an Indonesian cosmetics homepage named **KOSMETIK**.
-- This is a component design backlog. T01–T19 now have runtime implementations; backend integrations and remaining components are separate work.
+- This is a component design backlog. T01–T24 now have runtime implementations; backend integrations and remaining components are separate work.
 - Use [app.css](../../.agents/skills/design-taste-frontend/assets/app.css) as the source of truth for design tokens. Choose A1 or A2 for composition, content, image placement, and section order.
 - Mobile layouts and interactive states below are proposed requirements: the references show desktop layouts only.
 - Where screenshot styling or a task below conflicts with `app.css`, the token mapping below takes precedence. Screenshot color and type descriptions record the references, not required overrides.
@@ -211,39 +211,45 @@ Header → category navigation → hero → favorite products → category disco
 
 ### T20 — Design a service-benefit item and row
 
-- [ ] Create an outline icon plus short title/description for shopping help, payment, and customer support.
-- [ ] Arrange three desktop items with subtle separators; stack them with suitable spacing on mobile.
+- [x] Create an outline icon plus short title/description for shopping help, payment, and customer support.
+- [x] Arrange three desktop items with subtle separators; stack them with suitable spacing on mobile.
+- **Delivery:** [Runtime and review](./storefront-support-footer.md#t20--service-benefits). `ServiceBenefits.svelte` implements the outline-icon row and stacked compact layout.
 - **Done when:** icon scale, text alignment, and separator placement match the selected reference.
 - **Dependencies:** T01, T02, T04.
 
 ### T21 — Design the newsletter form
 
-- [ ] Add an email field, “Berlangganan” button, and small privacy-policy sentence with a visible link.
-- [ ] Specify focus, invalid email, submitting, success, and failure states, with accessible validation messages.
+- [x] Add an email field, “Berlangganan” button, and small privacy-policy sentence with a visible link.
+- [x] Specify focus, invalid email, submitting, success, and failure states, with accessible validation messages.
+- **Delivery:** [Runtime and review](./storefront-support-footer.md#t21--newsletter-form). `NewsletterForm.svelte` implements accessible validation and adapter-driven submission states; the homepage has no live adapter and `/komponen` provides a local state fixture.
 - **Done when:** the form fits inline on desktop and stacks without crowding on mobile; submission states are documented for later integration.
 - **Dependencies:** T01, T03, T06.
 
 ### T22 — Design the newsletter section
 
-- [ ] A1: rounded pale panel with “Inspirasi cantik di inbox-mu.” and supporting text.
-- [ ] A2: full-width dark green band with “Kabar cantik, sesekali.”, light heading/body text, and light submit button.
+- [x] A1: rounded pale panel with “Inspirasi cantik di inbox-mu.” and supporting text.
+- [ ] A2: full-width dark green band with “Kabar cantik, sesekali.”, light heading/body text, and light submit button. **Not applicable to selected A1.**
+- **Delivery:** [Runtime and review](./storefront-support-footer.md#t22--newsletter-section). `NewsletterSection.svelte` implements the A1 inset neutral panel and responsive copy/form split.
 - **Done when:** the copy and form feel balanced and contrast remains readable, including the privacy line.
 - **Dependencies:** T02, T21.
 
 ### T23 — Design footer brand and social links
 
-- [ ] Place the KOSMETIK wordmark, short brand description, and Instagram, Facebook, YouTube, and TikTok icons.
-- [ ] Specify link focus states and accessible names for each social icon.
+- [x] Place the KOSMETIK wordmark, short brand description, and Instagram, Facebook, YouTube, and TikTok icons.
+- [x] Specify link focus states and accessible names for each social icon.
+- **Delivery:** [Runtime and review](./storefront-support-footer.md#t23--footer-brand-and-social-controls). `StoreFooter.svelte` implements the wordmark, description, and configurable named social links; approved account URLs remain unavailable.
 - **Done when:** the brand treatment matches the header and the social row has consistent spacing.
 - **Dependencies:** T01, T04, T05.
 
 ### T24 — Design footer navigation and legal row
 
-- [ ] Add three link groups: Belanja, Bantuan, and Informasi (A1) or Tentang (A2), following the pictured link lists.
-- [ ] Add the lower divider and copyright line; follow A2's split left/right legal alignment when using A2.
-- [ ] Define a readable stacked or wrapped mobile arrangement.
+- [x] Add three link groups: Belanja, Bantuan, and Informasi (A1) or Tentang (A2), following the pictured link lists.
+- [x] Add the lower divider and copyright line; follow A2's split left/right legal alignment when using A2.
+- [x] Define a readable stacked or wrapped mobile arrangement.
+- **Delivery:** [Runtime and review](./storefront-support-footer.md#t24--footer-navigation-and-legal-row). `StoreFooter.svelte` implements A1 navigation groups, local preview destinations, dividers, copyright, and compact wrapping.
 - **Done when:** all columns align, links have clear focus states, and no footer text is clipped.
 - **Dependencies:** T01, T02, T23.
+
 
 ## Final review tasks
 
@@ -274,8 +280,9 @@ Header → category navigation → hero → favorite products → category disco
 
 Keep each numbered task as a separate work item. Product detail pages, checkout, account screens, search results, and backend integrations are outside this screenshot-based homepage design backlog.
 
-## T01–T04 runtime verification
+## Runtime overview
 
-The `/` route is a component preview for these four tasks, not the assembled
-homepage. See [implementation notes](./storefront-implementation.md) for usage,
-verification, and remaining browser checks. T05–T26 are outside this implementation.
+The `/` route now assembles the selected A1 homepage through T24. Token/layout/
+control examples and the local newsletter fixture are preserved at `/komponen`.
+See [implementation notes](./storefront-implementation.md) and the linked task
+contracts for validation and integration limits. T25–T26 remain pending.

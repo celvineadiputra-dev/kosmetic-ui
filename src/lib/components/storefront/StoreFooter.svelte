@@ -1,6 +1,6 @@
 <script lang="ts">
   import { IconBrandInstagram, IconBrandFacebook, IconBrandYoutube, IconBrandTiktok } from '@tabler/icons-svelte';
-  let { infoTitle, socialLinks = {} }: { infoTitle?: string; socialLinks?: Partial<Record<'instagram' | 'facebook' | 'youtube' | 'tiktok', string>> } = $props();
+  let { socialLinks = {} }: { infoTitle?: string; socialLinks?: Partial<Record<'instagram' | 'facebook' | 'youtube' | 'tiktok', string>> } = $props();
   const socials = [
     { id: 'instagram', label: 'Instagram', icon: IconBrandInstagram },
     { id: 'facebook', label: 'Facebook', icon: IconBrandFacebook },
@@ -44,10 +44,6 @@
       {/each}
     </div>
     <div class="legal"><p>© 2026 KOSMETIK. Seluruh hak cipta dilindungi.</p></div>
-    <div class="preview-notes">
-      <p id="informasi-pratinjau" role="status">{infoTitle ? `${infoTitle} belum tersedia. Halaman ini adalah pratinjau desain; kebijakan dan layanan toko belum terhubung.` : ''}</p>
-      <p id="catatan">Pratinjau A1: foto hasil AI dan data produk contoh. Akun, wishlist, keranjang, newsletter, dan media sosial belum terhubung. <a href="/komponen">Lihat komponen dan state form</a>.</p>
-    </div>
   </div>
 </footer>
 
@@ -66,10 +62,6 @@
   li a { display: inline-flex; align-items: center; min-height: var(--control-height); max-width: 100%; color: var(--muted); font-size: var(--fs-body); text-decoration: none; overflow-wrap: anywhere; text-underline-offset: 3px; }
   li a:focus-visible, li a:active { text-decoration: underline; }
   .legal { margin-top: var(--pad); padding-top: var(--gap); border-top: 1px solid var(--rule); color: var(--faint); font-size: var(--fs-small); } /* taste-skill-ignore: T24 explicitly requires the lower divider and copyright row. */
-  .preview-notes { color: var(--muted); font-size: var(--fs-small); margin-top: var(--gap); }
-  .preview-notes p { max-width: 60ch; overflow-wrap: anywhere; scroll-margin-top: var(--pad); }
-  .preview-notes p:not(:empty) + p { margin-top: calc(var(--gap) / 2); }
-  .preview-notes a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
   @media (hover: hover) { li a:hover { text-decoration: underline; } a.social-control:hover { background: var(--raised); } }
   @media (max-width: 767px) { .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } .brand-column { grid-column: 1 / -1; } }
   @media (max-width: 767px), (pointer: coarse) { li a { min-height: var(--store-touch-target); } }

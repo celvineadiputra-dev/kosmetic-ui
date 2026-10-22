@@ -10,7 +10,7 @@
   <SectionHeading id={`${id}-title`} {title} {subtitle} href="#koleksi" />
   <ul class="store-product-grid product-list" class:with-ratings={withRatings}>
     {#each products as product (product.id)}
-      <li><ProductCard {product} href={`?produk=${product.id}#catatan-produk`} /></li>
+      <li><ProductCard {product} href={`/produk/${product.id}`} /></li>
     {/each}
   </ul>
 </section>

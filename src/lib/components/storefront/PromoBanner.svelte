@@ -17,10 +17,7 @@
       />
     </figure>
     <div class="promo-content">
-      <p class="promo-kicker">
-        <span class="kicker-dot" aria-hidden="true"></span>
-        Koleksi Unggulan
-      </p>
+      <p class="promo-kicker">Koleksi Unggulan</p>
       <h2 id="promo-title">Tampil natural,<br />cantik setiap hari.</h2>
       <p class="promo-description">
         Pilihan formula lembut dan warna esensial untuk riasan harian yang selalu terasa ringan seperti kulitmu sendiri.
@@ -81,22 +78,13 @@
   }
 
   .promo-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    display: inline-block;
     color: #874E3C;
     font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
-  }
-
-  .kicker-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background-color: #874E3C;
   }
 
   h2 {

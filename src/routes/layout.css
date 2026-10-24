@@ -292,10 +292,6 @@
 	min-width: 0;
 }
 
-.storefront .store-newsletter {
-	gap: var(--gap);
-}
-
 .storefront :is(.store-product-grid, .store-category-grid, .store-split) > * {
 	min-width: 0;
 	overflow-wrap: anywhere;
@@ -341,9 +337,5 @@
 @media (min-width: 768px) {
 	.storefront :is(.store-product-grid, .store-category-grid) {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
-
-	.storefront .store-newsletter {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }

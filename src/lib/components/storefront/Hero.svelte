@@ -1,29 +1,15 @@
 <script lang="ts">
+  import { IconShieldCheck, IconAward, IconTruck } from '@tabler/icons-svelte';
   import Action from './Action.svelte';
 
   let { shopHref }: { shopHref: string } = $props();
 </script>
 
-<section class="store-split store-hero hero store-section" aria-labelledby="hero-title">
-  <div class="store-copy hero-copy">
-    <p class="hero-intro"><span class="intro-dot" aria-hidden="true"></span>Pilihan kosmetik harian</p>
-    <h1 id="hero-title">Riasan simpel,<br />cantik setiap hari.</h1>
-    <p class="hero-description">Temukan kosmetik pilihan untuk tampilan terbaikmu.</p>
-    <div class="hero-action">
-      <Action href={shopHref} arrow>Belanja Sekarang</Action>
-    </div>
-    <div class="hero-highlights" aria-label="Jaminan belanja">
-      <span class="highlight-item">BPOM Resmi</span>
-      <span class="highlight-dot" aria-hidden="true">·</span>
-      <span class="highlight-item">100% Original</span>
-      <span class="highlight-dot" aria-hidden="true">·</span>
-      <span class="highlight-item">Gratis Ongkir</span>
-    </div>
-  </div>
-  <figure class="store-media store-hero-media hero-media">
+<section class="store-hero hero store-section" aria-labelledby="hero-title">
+  <figure class="hero-media">
     <img
-      src="/images/kosmetik-a1-hero.png"
-      alt="Lipstik rose nude, cushion beige, foundation, dan blush peach dalam kemasan keemasan di atas batu krem."
+      src="/images/natural-beauty-editorial-hero.png"
+      alt="Model dengan riasan natural di samping koleksi cushion, lipstik, foundation, dan blush di atas marmer dengan pencahayaan hangat."
       width="1536"
       height="1024"
       loading="eager"
@@ -31,101 +17,195 @@
       decoding="async"
     />
   </figure>
+  <div class="hero-copy">
+    <p class="hero-intro"><span class="intro-dot" aria-hidden="true"></span>Pilihan kosmetik harian</p>
+    <h1 id="hero-title">Riasan simpel,<br />cantik setiap hari.</h1>
+    <p class="hero-description">
+      Temukan pilihan makeup dengan warna natural untuk tampilan yang selalu terasa seperti dirimu.
+    </p>
+    <div class="hero-action">
+      <Action href={shopHref} arrow>Belanja Koleksi</Action>
+    </div>
+    <div class="hero-benefits" aria-label="Keunggulan layanan">
+      <div class="benefit-item">
+        <IconShieldCheck size={18} stroke={1.75} aria-hidden="true" focusable="false" />
+        <span>BPOM Resmi</span>
+      </div>
+      <span class="benefit-divider" aria-hidden="true"></span>
+      <div class="benefit-item">
+        <IconAward size={18} stroke={1.75} aria-hidden="true" focusable="false" />
+        <span>Produk Original</span>
+      </div>
+      <span class="benefit-divider" aria-hidden="true"></span>
+      <div class="benefit-item">
+        <IconTruck size={18} stroke={1.75} aria-hidden="true" focusable="false" />
+        <span>Gratis Ongkir</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
   .hero {
-    margin-block-start: var(--gap);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-card);
-    background: var(--surface);
-    overflow: hidden;
-    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
-  }
-  .hero-copy {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0;
-    min-width: 0;
-    padding: var(--pad);
+    margin-block-start: var(--gap);
+    border-radius: var(--radius-card);
+    background-color: #F3EEE8;
+    overflow: hidden;
   }
+
+  .hero-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80% center;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 1.25rem 2rem;
+    background-color: #F3EEE8;
+  }
+
   .hero-intro {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    color: var(--store-accent);
+    gap: 8px;
+    color: #874E3C;
     font-size: var(--fs-small);
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: calc(var(--gap) / 2);
+    margin-bottom: 0.75rem;
   }
+
   .intro-dot {
     width: 6px;
     height: 6px;
     border-radius: 999px;
-    background: var(--store-accent);
+    background-color: #874E3C;
   }
+
   h1 {
-    max-width: 18ch;
-    color: var(--text);
-    font: 700 var(--store-display-size)/1.1 var(--font);
-    letter-spacing: -0.03em;
-    text-wrap: balance;
-    overflow-wrap: normal;
-    margin-bottom: 12px;
+    color: #302823;
+    font-family: 'Playfair Display', 'Didot', 'Bodoni MT', 'Cinzel', 'Georgia', serif;
+    font-size: clamp(2rem, 2.5vw, 2.625rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.875rem;
   }
+
   .hero-description {
     max-width: 44ch;
-    color: var(--muted-foreground);
-    font-size: var(--fs-body);
+    color: #50372B;
+    font-size: clamp(0.9375rem, 1.05vw, 1.0625rem);
     line-height: 1.6;
     text-wrap: pretty;
   }
+
   .hero-action {
-    max-width: 100%;
-    margin-top: calc(var(--gap) * 1.25);
+    margin-top: 1.5rem;
   }
-  .hero-highlights {
+
+  .hero-benefits {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
-    margin-top: calc(var(--gap) * 1.25);
-    padding-top: calc(var(--gap) * 0.75);
-    border-top: 1px solid var(--rule);
-    color: var(--faint);
+    gap: 10px 16px;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(135, 78, 60, 0.2);
+    color: #50372B;
     font-size: var(--fs-small);
     font-weight: 500;
   }
-  .highlight-dot {
-    color: var(--control);
+
+  .benefit-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
-  .hero-media {
-    position: relative;
-    overflow: hidden;
+
+  .benefit-item :global(svg) {
+    color: #874E3C;
+    flex-shrink: 0;
   }
-  .hero-media img {
-    object-position: center;
-    transition: transform 700ms var(--ease-out);
+
+  .benefit-divider {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background-color: rgba(135, 78, 60, 0.3);
   }
-  @media (hover: hover) {
-    .hero:hover .hero-media img {
-      transform: scale(1.025);
+
+  @media (max-width: 480px) {
+    .benefit-divider {
+      display: none;
     }
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: 900px) {
+    .hero {
+      flex-direction: row;
+      align-items: center;
+      min-height: 520px;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: auto;
+      pointer-events: none;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+    }
+
     .hero-copy {
-      padding: clamp(32px, 5vw, 52px);
+      max-width: 54%;
+      padding: clamp(2.5rem, 4.5vw, 4rem);
+      background: linear-gradient(
+        to right,
+        rgba(243, 238, 232, 0.98) 0%,
+        rgba(243, 238, 232, 0.94) 75%,
+        rgba(243, 238, 232, 0) 100%
+      );
     }
   }
-  @media (max-width: 767px) {
-    h1 {
-      letter-spacing: -0.04em;
+
+  @media (min-width: 1200px) {
+    .hero {
+      min-height: 560px;
+    }
+
+    .hero-copy {
+      max-width: 52%;
+      padding: clamp(3rem, 5vw, 5rem);
     }
   }
+
   @media (prefers-reduced-motion: reduce) {
     .hero-media img {
       transition: none;

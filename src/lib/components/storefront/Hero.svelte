@@ -55,7 +55,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--accent);
+    color: var(--store-accent);
     font-size: var(--fs-small);
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -66,7 +66,7 @@
     width: 6px;
     height: 6px;
     border-radius: 999px;
-    background: var(--accent);
+    background: var(--store-accent);
   }
   h1 {
     max-width: 18ch;
@@ -79,7 +79,7 @@
   }
   .hero-description {
     max-width: 44ch;
-    color: var(--muted);
+    color: var(--muted-foreground);
     font-size: var(--fs-body);
     line-height: 1.6;
     text-wrap: pretty;

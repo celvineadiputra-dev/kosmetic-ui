@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import { browser } from '$app/env';
   import { page } from '$app/state';
   import {
@@ -291,7 +290,7 @@
   }
   .success-subtitle {
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
     max-width: 50ch;
     margin: 0 auto var(--pad) auto;
     text-wrap: pretty;
@@ -316,7 +315,7 @@
   }
   .inv-label {
     font-size: 11px;
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -368,11 +367,11 @@
     margin: 0;
   }
   :global(.accent-ic) {
-    color: var(--accent);
+    color: var(--store-accent);
   }
   .pay-note {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 var(--gap) 0;
     line-height: 1.5;
   }
@@ -420,7 +419,7 @@
   .va-label {
     display: block;
     font-size: 11px;
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-transform: uppercase;
   }
   .va-number {
@@ -446,7 +445,7 @@
     font: 600 var(--fs-small)/1.2 var(--font);
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 10px 0;
   }
   .customer-name {
@@ -457,21 +456,21 @@
   .customer-phone,
   .customer-address {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 4px 0;
     line-height: 1.4;
   }
   .courier-note {
     font-size: var(--fs-small);
     font-style: italic;
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-top: 8px;
   }
   .summary-line-row {
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-bottom: 6px;
   }
   .summary-line-row.discount {

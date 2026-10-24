@@ -16,7 +16,7 @@
   .store-search :global(svg) { position: absolute; inset-inline-start: 12px; top: 50%; transform: translateY(-50%); color: var(--faint); pointer-events: none; }
   input { display: block; width: 100%; min-width: 0; min-height: 38px; padding: 8px 12px 8px 40px; border: 1px solid var(--control); border-radius: var(--radius-control); background: var(--surface); color: var(--text); font: var(--fs-body)/20px var(--font); box-shadow: none; } /* taste-skill-ignore: removes the forms plugin focus shadow; no elevation is added. */
   input::placeholder { color: var(--faint); opacity: 1; }
-  input:focus { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; box-shadow: none; } /* taste-skill-ignore: removes the forms plugin focus shadow; no elevation is added. */
+  input:focus { border-color: var(--store-accent); outline: 2px solid var(--store-accent); outline-offset: 2px; box-shadow: none; } /* taste-skill-ignore: removes the forms plugin focus shadow; no elevation is added. */
   input:not(:placeholder-shown) { color: var(--text); }
   @media (max-width: 767px), (pointer: coarse) { input { min-height: var(--store-touch-target); font-size: var(--fs-section); } }
 </style>

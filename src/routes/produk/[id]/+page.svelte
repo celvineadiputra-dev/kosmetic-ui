@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import type { PageProps } from './$types';
   import { goto } from '$app/navigation';
   import { cart } from '#lib/stores/cart.svelte.js';
@@ -395,7 +394,7 @@
     font-size: var(--fs-small);
   }
   .breadcrumb-trail a {
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-decoration: none;
     transition: color var(--t-hover) var(--ease-out);
   }
@@ -463,7 +462,7 @@
     padding: 4px 10px;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
-    color: var(--accent);
+    color: var(--store-accent);
     border: 1px solid var(--border);
     border-radius: 999px;
     font-size: var(--fs-small);
@@ -480,7 +479,7 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--store-accent);
     margin-bottom: 6px;
   }
   .product-title {
@@ -516,7 +515,7 @@
     font-weight: 700;
   }
   .rating-count {
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .meta-separator {
     color: var(--control);
@@ -544,8 +543,8 @@
   }
   .discount-badge {
     padding: 2px 8px;
-    background: color-mix(in srgb, var(--accent) 12%, transparent);
-    color: var(--accent);
+    background: color-mix(in srgb, var(--store-accent) 12%, transparent);
+    color: var(--store-accent);
     border-radius: 999px;
     font-size: var(--fs-small);
     font-weight: 700;
@@ -554,7 +553,7 @@
   .quick-description {
     font-size: var(--fs-body);
     line-height: 1.6;
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 var(--pad) 0;
     text-wrap: pretty;
   }
@@ -572,7 +571,7 @@
     margin-bottom: 10px;
   }
   .selector-title {
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .active-shade-name {
     font-weight: 600;
@@ -737,7 +736,7 @@
     gap: 12px;
   }
   :global(.perk-icon) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
     margin-top: 2px;
   }
@@ -748,7 +747,7 @@
   }
   .perk-item p {
     font-size: 12px;
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 2px 0 0 0;
   }
 
@@ -771,7 +770,7 @@
     background: none;
     border: none;
     border-bottom: 2px solid transparent;
-    color: var(--muted);
+    color: var(--muted-foreground);
     font: 600 var(--fs-body)/1.2 var(--font);
     cursor: pointer;
     white-space: nowrap;
@@ -781,8 +780,8 @@
     color: var(--text);
   }
   .tab-btn.active {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
+    color: var(--store-accent);
+    border-bottom-color: var(--store-accent);
     background: var(--surface);
   }
   .tab-content {
@@ -812,10 +811,10 @@
     align-items: center;
     gap: 8px;
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   :global(.benefit-check) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
   .how-to-steps {
@@ -855,7 +854,7 @@
     font-size: var(--fs-body);
   }
   .info-label {
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .info-val {
     font-weight: 600;
@@ -869,7 +868,7 @@
   .ingredients-text {
     font-size: var(--fs-small);
     line-height: 1.6;
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0;
   }
 

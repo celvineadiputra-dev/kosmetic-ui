@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import { page } from '$app/state';
   import CategoryDiscovery from '#lib/components/storefront/CategoryDiscovery.svelte';
   import PromoBanner from '#lib/components/storefront/PromoBanner.svelte';
@@ -31,13 +30,13 @@
 </script>
 
 <svelte:head>
-  <title>KOSMETIK — Riasan simpel, cantik setiap hari.</title>
+  <title>KOSMETIK - Riasan simpel, cantik setiap hari.</title>
   <meta name="description" content="Temukan pilihan kosmetik harian, riasan natural, dan koleksi terbaru KOSMETIK." />
 </svelte:head>
 
 <div class="storefront">
   <a class="skip-link" href="#fondasi">Lewati ke konten</a>
-  <Header homeHref="/" accountHref="#catatan" wishlistHref="#catatan" cartHref="#catatan" searchAction="/#hasil-pratinjau" {query} />
+  <Header homeHref="/" accountHref="#catatan" wishlistHref="#catatan" cartHref="/keranjang" searchAction="/#hasil-pratinjau" {query} />
   <CategoryNav items={categories} active={activeCategory.id} />
   <main id="fondasi" class="store-container">
     <Hero shopHref="#koleksi" />
@@ -57,7 +56,7 @@
 
 <style>
   .catalog { scroll-margin-top: var(--pad); }
-  .preview-status { padding-block: var(--pad); color: var(--muted); overflow-wrap: anywhere; scroll-margin-top: var(--pad); }
+  .preview-status { padding-block: var(--pad); color: var(--muted-foreground); overflow-wrap: anywhere; scroll-margin-top: var(--pad); }
   .skip-link { position: absolute; left: var(--pad); top: var(--pad); padding: var(--gap); background: var(--surface); color: var(--text); transform: translateY(-200%); z-index: 1; }
   .skip-link:focus { transform: none; }
 </style>

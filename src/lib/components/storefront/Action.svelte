@@ -35,7 +35,7 @@
   .store-action:focus-visible { text-decoration: underline; }
   .store-action:active:not(:disabled):not([aria-disabled='true']) { text-decoration: underline; text-decoration-thickness: 2px; }
   .primary:active:not(:disabled) { box-shadow: inset 0 0 0 1px var(--primary), inset 0 0 0 3px var(--primary), inset 0 0 0 4px var(--primary-ink); } /* taste-skill-ignore: T03 explicitly requires this pressed inset stroke. */
-  .store-action:disabled, .store-action[aria-disabled='true'] { color: var(--muted); text-decoration: none; cursor: default; }
+  .store-action:disabled, .store-action[aria-disabled='true'] { color: var(--muted-foreground); text-decoration: none; cursor: default; }
   .primary:disabled, .primary[aria-disabled='true'] { background: var(--raised); border-color: var(--control); cursor: not-allowed; }
   @media (hover: hover) {
     .store-action:hover:not(:disabled):not([aria-disabled='true']) { text-decoration: underline; }

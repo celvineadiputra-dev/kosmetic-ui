@@ -12,5 +12,5 @@
   .newsletter { align-items: center; padding: var(--pad); border-radius: var(--radius-card); background: var(--raised); scroll-margin-top: var(--pad); }
   h2 { color: var(--text); font: 700 var(--fs-title)/1.2 var(--font); letter-spacing: -0.02em; }
   h2 span { white-space: nowrap; }
-  p { margin-top: calc(var(--gap) / 2); color: var(--muted); font-size: var(--fs-body); }
+  p { margin-top: calc(var(--gap) / 2); color: var(--muted-foreground); font-size: var(--fs-body); }
 </style>

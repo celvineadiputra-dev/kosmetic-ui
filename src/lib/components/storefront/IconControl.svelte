@@ -57,9 +57,9 @@
   .visible-label { min-width: 0; font: var(--fs-small)/16px var(--font); overflow-wrap: anywhere; }
   @media (max-width: 1023px) { .with-label { padding-inline: 0; } .visible-label { display: none; } }
   .outlined { border-color: var(--control); background: var(--surface); }
-  .selected { color: var(--accent); }
+  .selected { color: var(--store-accent); }
   .store-icon:active:not(:disabled):not([aria-disabled='true']) { background: var(--active); transition-duration: var(--t-press); }
-  .store-icon:disabled, .store-icon[aria-disabled='true'] { color: var(--muted); background: var(--raised); cursor: not-allowed; }
+  .store-icon:disabled, .store-icon[aria-disabled='true'] { color: var(--muted-foreground); background: var(--raised); cursor: not-allowed; }
   @media (hover: hover) { .store-icon:hover:not(:disabled):not([aria-disabled='true']) { background: var(--raised); } }
   @media (prefers-reduced-motion: reduce) { .store-icon { transition: none; } }
 </style>

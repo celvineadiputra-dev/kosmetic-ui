@@ -29,7 +29,7 @@
   .product-media, .product-media img { border-radius: var(--radius-card); }
   .product-media img { object-position: center; }
   h3 { font: 500 var(--fs-body)/20px var(--font); overflow-wrap: anywhere; }
-  .product-variant { color: var(--muted); font-size: var(--fs-body); overflow-wrap: anywhere; }
+  .product-variant { color: var(--muted-foreground); font-size: var(--fs-body); overflow-wrap: anywhere; }
   .product-price { color: var(--text); font-size: var(--fs-section); font-weight: 700; line-height: 24px; font-variant-numeric: tabular-nums; }
   .product-link:focus-visible h3 { text-decoration: underline; text-underline-offset: 3px; }
   .product-link:active h3 { text-decoration: underline; text-decoration-thickness: 2px; }

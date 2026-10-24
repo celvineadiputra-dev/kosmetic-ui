@@ -57,12 +57,12 @@
   .form-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: calc(var(--gap) / 2); }
   input { display: block; width: 100%; min-width: 0; min-height: 38px; border: 1px solid var(--control); border-radius: var(--radius-control); background: var(--surface); color: var(--text); padding: 8px 12px; font: var(--fs-body)/20px var(--font); box-shadow: none; } /* taste-skill-ignore: explicitly reset plugin shadows on the real form field. */
   input::placeholder { color: var(--faint); opacity: 1; }
-  input:focus { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; box-shadow: none; } /* taste-skill-ignore: no elevation; the shared accent focus outline replaces plugin shadows. */
+  input:focus { border-color: var(--store-accent); outline: 2px solid var(--store-accent); outline-offset: 2px; box-shadow: none; } /* taste-skill-ignore: no elevation; the shared accent focus outline replaces plugin shadows. */
   input[aria-invalid='true'] { border-color: var(--negative); }
   input:read-only { background: var(--raised); }
-  .privacy { max-width: 60ch; margin-top: calc(var(--gap) / 2); color: var(--muted); font-size: var(--fs-small); line-height: 1.5; }
-  .privacy :global(.privacy-link) { display: inline; font: inherit; color: var(--accent); }
-  .feedback { color: var(--muted); font-size: var(--fs-body); overflow-wrap: anywhere; }
+  .privacy { max-width: 60ch; margin-top: calc(var(--gap) / 2); color: var(--muted-foreground); font-size: var(--fs-small); line-height: 1.5; }
+  .privacy :global(.privacy-link) { display: inline; font: inherit; color: var(--store-accent); }
+  .feedback { color: var(--muted-foreground); font-size: var(--fs-body); overflow-wrap: anywhere; }
   .feedback:not(:empty) { margin-top: calc(var(--gap) / 2); }
   .error { color: var(--negative); }
   .success { color: var(--positive); }

@@ -51,7 +51,7 @@
     max-width: 100%;
     padding: calc(var(--gap) / 2) calc(var(--gap) * 0.75);
     border-radius: var(--radius-control);
-    color: var(--muted);
+    color: var(--muted-foreground);
     font: 500 var(--fs-body)/20px var(--font);
     letter-spacing: 0.01em;
     text-decoration: none;
@@ -84,10 +84,10 @@
     right: calc(var(--gap) * 0.75);
     height: 2px;
     border-radius: 999px;
-    background: var(--accent);
+    background: var(--store-accent);
   }
   .is-promo {
-    color: var(--accent);
+    color: var(--store-accent);
     font-weight: 600;
   }
   .promo-badge {
@@ -100,8 +100,8 @@
     line-height: 1.3;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--store-accent);
+    background: color-mix(in srgb, var(--store-accent) 12%, transparent);
     border-radius: 999px;
   }
   @media (max-width: 767px) {

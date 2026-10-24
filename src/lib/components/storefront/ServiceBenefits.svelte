@@ -24,6 +24,6 @@
   li + li { border-inline-start: 1px solid var(--border); } /* taste-skill-ignore: the subtle item separators are explicit T20 requirements. */
   li :global(svg) { flex-shrink: 0; color: var(--text); }
   h2 { color: var(--text); font: 600 var(--fs-body)/20px var(--font); }
-  p { margin-top: calc(var(--gap) / 4); color: var(--muted); font-size: var(--fs-body); overflow-wrap: anywhere; }
+  p { margin-top: calc(var(--gap) / 4); color: var(--muted-foreground); font-size: var(--fs-body); overflow-wrap: anywhere; }
   @media (max-width: 767px) { ul { grid-template-columns: minmax(0, 1fr); gap: var(--pad); } li { padding-inline: 0; } li + li { border-inline-start: 0; } }
 </style>

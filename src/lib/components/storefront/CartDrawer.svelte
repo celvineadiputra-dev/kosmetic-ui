@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import { cart } from '#lib/stores/cart.svelte.js';
   import { IconX, IconTrash, IconPlus, IconMinus, IconShoppingBag, IconTruck, IconArrowRight } from '@tabler/icons-svelte';
 
@@ -272,7 +271,7 @@
     background: none;
     border: none;
     border-radius: var(--radius-control);
-    color: var(--muted);
+    color: var(--muted-foreground);
     cursor: pointer;
     transition: background-color var(--t-hover) var(--ease-out), color var(--t-hover) var(--ease-out);
   }
@@ -294,7 +293,7 @@
     margin-bottom: 8px;
   }
   :global(.truck-icon) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
   .shipping-text-row p {
@@ -314,7 +313,7 @@
   }
   .progress-fill {
     height: 100%;
-    background: var(--accent);
+    background: var(--store-accent);
     border-radius: 999px;
     transition: width 300ms var(--ease-out);
   }
@@ -345,7 +344,7 @@
     height: 64px;
     border-radius: 999px;
     background: var(--raised);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-bottom: var(--gap);
   }
   .empty-state h3 {
@@ -355,7 +354,7 @@
   }
   .empty-state p {
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 var(--pad) 0;
     max-width: 28ch;
   }
@@ -427,7 +426,7 @@
     transition: color var(--t-hover) var(--ease-out);
   }
   .item-name:hover {
-    color: var(--accent);
+    color: var(--store-accent);
   }
   .remove-btn {
     background: none;
@@ -448,7 +447,7 @@
     align-items: center;
     gap: 6px;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-top: 2px;
   }
   .shade-dot {
@@ -459,7 +458,7 @@
   }
   .variant-text {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-top: 2px;
   }
   .item-footer {
@@ -519,7 +518,7 @@
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .summary-line.discount {
     color: var(--positive);
@@ -570,7 +569,7 @@
   .view-cart-link {
     text-align: center;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-decoration: none;
     padding: 4px;
     transition: color var(--t-hover) var(--ease-out);

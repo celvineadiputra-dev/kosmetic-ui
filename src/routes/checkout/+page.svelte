@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import { cart } from '#lib/stores/cart.svelte.js';
   import { goto } from '$app/navigation';
   import {
@@ -491,7 +490,7 @@
     gap: 6px;
     font-size: var(--fs-small);
     font-weight: 600;
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-decoration: none;
   }
   .back-link:hover {
@@ -513,7 +512,7 @@
   }
   .empty-notice p {
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 var(--pad) 0;
   }
   .primary-btn {
@@ -610,8 +609,8 @@
   }
   input:focus,
   textarea:focus {
-    border-color: var(--accent);
-    outline: 2px solid var(--accent);
+    border-color: var(--store-accent);
+    outline: 2px solid var(--store-accent);
     outline-offset: 2px;
   }
 
@@ -641,13 +640,13 @@
   }
   .courier-option.selected,
   .payment-option.selected {
-    border-color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+    border-color: var(--store-accent);
+    background: color-mix(in srgb, var(--store-accent) 5%, var(--surface));
   }
   .courier-option input,
   .payment-option input {
     margin-top: 3px;
-    accent-color: var(--accent);
+    accent-color: var(--store-accent);
   }
   .courier-info,
   .payment-content {
@@ -670,7 +669,7 @@
   .courier-time,
   .payment-desc {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 4px 0 0 0;
   }
   .payment-header {
@@ -681,7 +680,7 @@
     color: var(--text);
   }
   :global(.payment-ic) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
 
@@ -758,13 +757,13 @@
   }
   .mini-variant {
     font-size: 11px;
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .mini-price-row {
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .mini-price-row strong {
     color: var(--text);
@@ -783,7 +782,7 @@
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .calc-row span.free {
     color: var(--positive);
@@ -839,10 +838,10 @@
     align-items: center;
     gap: 8px;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   :global(.assure-ic) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
 

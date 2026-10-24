@@ -11,6 +11,6 @@
 </p>
 
 <style>
-  .product-rating { display: flex; align-items: center; gap: calc(var(--gap) / 2); color: var(--muted); font-size: var(--fs-small); line-height: 20px; }
+  .product-rating { display: flex; align-items: center; gap: calc(var(--gap) / 2); color: var(--muted-foreground); font-size: var(--fs-small); line-height: 20px; }
   .product-rating :global(svg) { color: var(--store-rating-star); flex-shrink: 0; }
 </style>

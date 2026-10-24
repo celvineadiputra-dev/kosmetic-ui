@@ -359,7 +359,7 @@
   }
   .reviews-subtitle {
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-top: 4px;
   }
   .write-review-btn {
@@ -422,7 +422,7 @@
   }
   .review-total-count {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-top: 6px;
   }
 
@@ -477,7 +477,7 @@
   }
   .count-label {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-align: right;
   }
 
@@ -503,7 +503,7 @@
   .cancel-btn {
     background: none;
     border: none;
-    color: var(--muted);
+    color: var(--muted-foreground);
     font-size: var(--fs-small);
     cursor: pointer;
     padding: 4px 8px;
@@ -550,7 +550,7 @@
     margin-inline-start: 12px;
     font-size: var(--fs-small);
     font-weight: 600;
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .form-row {
     display: flex;
@@ -575,8 +575,8 @@
   input[type='text']:focus,
   select:focus,
   textarea:focus {
-    border-color: var(--accent);
-    outline: 2px solid var(--accent);
+    border-color: var(--store-accent);
+    outline: 2px solid var(--store-accent);
     outline-offset: 2px;
   }
   .form-error-msg {
@@ -624,7 +624,7 @@
   .filter-chip {
     padding: 6px 14px;
     background: var(--surface);
-    color: var(--muted);
+    color: var(--muted-foreground);
     border: 1px solid var(--border);
     border-radius: 999px;
     font: 500 var(--fs-small)/1.4 var(--font);
@@ -706,7 +706,7 @@
     gap: 6px;
     margin-top: 4px;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .review-stars {
     display: inline-flex;
@@ -716,7 +716,7 @@
     color: var(--control);
   }
   .shade-pill {
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .helpful-btn {
     display: inline-flex;
@@ -727,7 +727,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-control);
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     cursor: pointer;
     transition: all var(--t-hover) var(--ease-out);
   }
@@ -737,9 +737,9 @@
     background: var(--raised);
   }
   .helpful-btn.liked {
-    color: var(--accent);
-    border-color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--store-accent);
+    border-color: var(--store-accent);
+    background: color-mix(in srgb, var(--store-accent) 10%, transparent);
   }
   .review-comment-body {
     font-size: var(--fs-body);
@@ -756,7 +756,7 @@
     background: var(--surface);
     border: 1px dashed var(--control);
     border-radius: var(--radius-card);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   :global(.empty-icon) {
     color: var(--faint);

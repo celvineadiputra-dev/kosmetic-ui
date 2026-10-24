@@ -27,7 +27,7 @@
   .promo-media img { object-position: center; }
   .promo-copy { display: grid; align-content: center; justify-items: start; gap: calc(var(--gap) / 2); min-width: 0; }
   h2 { color: var(--text); font: 700 var(--fs-kpi)/1.05 var(--font); letter-spacing: -0.02em; }
-  p { max-width: 38ch; color: var(--muted); font-size: var(--fs-body); }
+  p { max-width: 38ch; color: var(--muted-foreground); font-size: var(--fs-body); }
   .promo-action { max-width: 100%; margin-top: calc(var(--gap) / 2); }
   @media (min-width: 768px) { .promo-media, .promo-media img { border-radius: var(--radius-card) 0 0 var(--radius-card); } }
 </style>

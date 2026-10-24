@@ -17,5 +17,5 @@
   .store-section-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: calc(var(--gap) / 2) var(--gap); margin-bottom: var(--gap); }
   .heading-copy { min-width: 0; }
   h2 { color: var(--text); font: 700 var(--fs-title)/1.2 var(--font); letter-spacing: -0.02em; overflow-wrap: anywhere; }
-  p { margin-top: calc(var(--gap) / 4); color: var(--muted); font-size: var(--fs-body); }
+  p { margin-top: calc(var(--gap) / 4); color: var(--muted-foreground); font-size: var(--fs-body); }
 </style>

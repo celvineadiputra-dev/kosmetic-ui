@@ -1,5 +1,4 @@
 <script lang="ts">
-  import '#lib/components/storefront/foundation.css';
   import Header from '#lib/components/storefront/Header.svelte';
   import CategoryNav from '#lib/components/storefront/CategoryNav.svelte';
   import StoreFooter from '#lib/components/storefront/StoreFooter.svelte';
@@ -293,7 +292,7 @@
     font-size: var(--fs-small);
   }
   .breadcrumb-trail a {
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-decoration: none;
   }
   .breadcrumb-trail a:hover {
@@ -329,7 +328,7 @@
     height: 80px;
     border-radius: 999px;
     background: var(--raised);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin-bottom: var(--gap);
   }
   .empty-cart-card h2 {
@@ -339,7 +338,7 @@
   }
   .empty-cart-card p {
     font-size: var(--fs-body);
-    color: var(--muted);
+    color: var(--muted-foreground);
     margin: 0 0 var(--pad) 0;
   }
   .start-btn {
@@ -372,7 +371,7 @@
     margin-bottom: 10px;
   }
   :global(.truck-icon) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
   .shipping-info-row p {
@@ -392,7 +391,7 @@
   }
   .progress-fill {
     height: 100%;
-    background: var(--accent);
+    background: var(--store-accent);
     border-radius: 999px;
     transition: width 300ms var(--ease-out);
   }
@@ -419,7 +418,7 @@
     border-bottom: 1px solid var(--rule);
     font-size: var(--fs-small);
     font-weight: 600;
-    color: var(--muted);
+    color: var(--muted-foreground);
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
@@ -463,14 +462,14 @@
     transition: color var(--t-hover) var(--ease-out);
   }
   .product-title-link:hover {
-    color: var(--accent);
+    color: var(--store-accent);
   }
   .shade-indicator {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .color-dot {
     width: 10px;
@@ -480,11 +479,11 @@
   }
   .variant-text {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .unit-price {
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .strikethrough {
     text-decoration: line-through;
@@ -566,7 +565,7 @@
     background: none;
     border: none;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
     cursor: pointer;
     text-decoration: underline;
   }
@@ -603,7 +602,7 @@
     margin-bottom: 8px;
   }
   :global(.tag-icon) {
-    color: var(--accent);
+    color: var(--store-accent);
   }
   .voucher-input-group {
     display: flex;
@@ -617,8 +616,8 @@
     font-size: var(--fs-small);
   }
   .voucher-input-group input:focus {
-    border-color: var(--accent);
-    outline: 2px solid var(--accent);
+    border-color: var(--store-accent);
+    outline: 2px solid var(--store-accent);
     outline-offset: 2px;
   }
   .apply-btn {
@@ -668,7 +667,7 @@
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   .discount-row {
     color: var(--positive);
@@ -721,10 +720,10 @@
     align-items: center;
     gap: 8px;
     font-size: var(--fs-small);
-    color: var(--muted);
+    color: var(--muted-foreground);
   }
   :global(.perk-ic) {
-    color: var(--accent);
+    color: var(--store-accent);
     flex-shrink: 0;
   }
 

@@ -51,15 +51,15 @@
   .store-footer { margin-top: var(--store-section-space); padding-block: var(--pad); background: var(--surface); border-top: 1px solid var(--rule); } /* taste-skill-ignore: T24 requires A1 footer dividers. */
   .footer-columns { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: var(--pad); }
   .wordmark { display: inline-flex; align-items: center; min-height: var(--store-touch-target); color: var(--text); font: 700 var(--fs-title)/1.2 var(--font); letter-spacing: normal; text-decoration: none; }
-  .brand-column p { max-width: 26ch; color: var(--muted); font-size: var(--fs-body); }
+  .brand-column p { max-width: 26ch; color: var(--muted-foreground); font-size: var(--fs-body); }
   .socials { display: flex; flex-wrap: wrap; gap: calc(var(--gap) / 2); margin-top: calc(var(--gap) / 2); }
   .social-control { display: inline-flex; align-items: center; justify-content: center; min-width: var(--store-touch-target); min-height: var(--store-touch-target); border-radius: var(--radius-control); color: var(--text); }
-  .unavailable { color: var(--muted); }
+  .unavailable { color: var(--muted-foreground); }
   a.social-control:active { background: var(--active); }
   nav { min-width: 0; }
   h2 { margin-block: calc(var(--gap) / 2); font: 600 var(--fs-body)/20px var(--font); color: var(--text); }
   ul { padding: 0; list-style: none; }
-  li a { display: inline-flex; align-items: center; min-height: var(--control-height); max-width: 100%; color: var(--muted); font-size: var(--fs-body); text-decoration: none; overflow-wrap: anywhere; text-underline-offset: 3px; }
+  li a { display: inline-flex; align-items: center; min-height: var(--control-height); max-width: 100%; color: var(--muted-foreground); font-size: var(--fs-body); text-decoration: none; overflow-wrap: anywhere; text-underline-offset: 3px; }
   li a:focus-visible, li a:active { text-decoration: underline; }
   .legal { margin-top: var(--pad); padding-top: var(--gap); border-top: 1px solid var(--rule); color: var(--faint); font-size: var(--fs-small); } /* taste-skill-ignore: T24 explicitly requires the lower divider and copyright row. */
   @media (hover: hover) { li a:hover { text-decoration: underline; } a.social-control:hover { background: var(--raised); } }

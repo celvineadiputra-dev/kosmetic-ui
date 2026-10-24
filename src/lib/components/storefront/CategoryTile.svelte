@@ -16,7 +16,7 @@
   .category-media, .category-media img { border-radius: var(--radius-card) var(--radius-card) 0 0; }
   .category-media img { object-position: center; }
   .category-label { display: flex; align-items: center; justify-content: center; min-height: var(--store-touch-target); padding: calc(var(--gap) / 2); background: var(--raised); border-radius: 0 0 var(--radius-card) var(--radius-card); font: 600 var(--fs-section)/1.4 var(--font); text-align: center; overflow-wrap: anywhere; text-underline-offset: 3px; }
-  .category-tile[aria-current='page'] .category-label { color: var(--accent); text-decoration: underline; }
+  .category-tile[aria-current='page'] .category-label { color: var(--store-accent); text-decoration: underline; }
   .category-tile:focus-visible .category-label { text-decoration: underline; }
   .category-tile:active .category-label { text-decoration: underline; text-decoration-thickness: 2px; }
   @media (hover: hover) { .category-tile:hover .category-label { text-decoration: underline; } }

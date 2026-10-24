@@ -326,10 +326,6 @@
 	aspect-ratio: var(--store-category-ratio);
 }
 
-.storefront .store-promo-media {
-	aspect-ratio: var(--store-promo-ratio);
-}
-
 .storefront .store-sr-only {
 	position: absolute;
 	width: 1px;
@@ -349,9 +345,5 @@
 
 	.storefront .store-newsletter {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.storefront .store-promo {
-		grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
 	}
 }

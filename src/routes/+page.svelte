@@ -30,8 +30,8 @@
 </script>
 
 <svelte:head>
-  <title>KOSMETIK - Riasan simpel, cantik setiap hari.</title>
-  <meta name="description" content="Temukan pilihan kosmetik harian, riasan natural, dan koleksi terbaru KOSMETIK." />
+  <title>CASANDRA - Riasan simpel, cantik setiap hari.</title>
+  <meta name="description" content="Temukan pilihan makeup harian, riasan natural, dan koleksi terbaru CASANDRA COSMETICS." />
 </svelte:head>
 
 <div class="storefront">

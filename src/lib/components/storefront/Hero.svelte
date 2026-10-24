@@ -79,7 +79,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1.75rem 1.25rem 2rem;
-    background-color: #F3EEE8;
+    background: transparent;
   }
 
   .hero-intro {
@@ -186,12 +186,7 @@
     .hero-copy {
       max-width: 54%;
       padding: clamp(2.5rem, 4.5vw, 4rem);
-      background: linear-gradient(
-        to right,
-        rgba(243, 238, 232, 0.98) 0%,
-        rgba(243, 238, 232, 0.94) 75%,
-        rgba(243, 238, 232, 0) 100%
-      );
+      background: transparent;
     }
   }
 

@@ -15,7 +15,10 @@
 
 <header class="store-header">
   <div class="store-container header-row">
-    <a class="wordmark" href={homeHref} aria-label="KOSMETIK, beranda">KOSMETIK</a>
+    <a class="wordmark" href={homeHref} aria-label="CASANDRA COSMETICS, beranda">
+      <span class="wordmark-title">CASANDRA</span>
+      <span class="wordmark-subtitle">C O S M E T I C S</span>
+    </a>
     <div class="header-search">
       <SearchField action={searchAction} value={query} />
     </div>
@@ -53,17 +56,33 @@
   }
   .wordmark {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: fit-content;
     max-width: 100%;
     min-height: var(--store-touch-target);
-    color: var(--text);
-    font: 700 var(--fs-title)/1.2 var(--font);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     text-decoration: none;
     overflow-wrap: anywhere;
     transition: opacity var(--t-hover) var(--ease-out), transform var(--t-press) var(--ease-out);
+  }
+  .wordmark-title {
+    color: var(--text);
+    font: 700 var(--fs-title)/1.1 var(--font);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .wordmark-subtitle {
+    display: block;
+    color: var(--primary);
+    font-size: 0.5625rem;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    line-height: 1;
+    margin-top: 3px;
+    text-transform: uppercase;
+    text-align: center;
   }
   .wordmark:active {
     transform: scale(0.98);

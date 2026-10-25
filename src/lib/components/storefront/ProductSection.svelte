@@ -22,4 +22,9 @@
   li { display: grid; grid-template-rows: subgrid; grid-row: span var(--product-rows); }
   /* Separate wrapped card rows while sharing text track sizes within each row. */
   li { margin-bottom: var(--gap); }
+  @media (max-width: 374.98px) {
+    .product-list {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

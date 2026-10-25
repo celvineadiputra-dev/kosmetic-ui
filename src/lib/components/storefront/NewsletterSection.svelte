@@ -77,6 +77,21 @@
     width: 100%;
   }
 
+  @media (max-width: 374.98px) {
+    .newsletter-card {
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .newsletter-body {
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
   @media (min-width: 900px) {
     .newsletter-body {
       display: grid;

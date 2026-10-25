@@ -53,7 +53,7 @@
 <style>
   .store-footer { margin-top: var(--store-section-space); padding-block: var(--pad); background: var(--surface); border-top: 1px solid var(--rule); } /* taste-skill-ignore: T24 requires A1 footer dividers. */
   .footer-columns { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: var(--pad); }
-  .wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: center; min-height: var(--store-touch-target); text-decoration: none; }
+  .wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; justify-content: center; min-height: var(--store-touch-target); text-decoration: none; white-space: nowrap; }
   .wordmark-title { color: var(--text); font: 700 var(--fs-title)/1.1 var(--font); letter-spacing: 0.1em; text-transform: uppercase; }
   .wordmark-subtitle { display: block; color: var(--primary); font-size: 0.5625rem; font-weight: 300; letter-spacing: 0.32em; line-height: 1; margin-top: 3px; text-align: center; width: 100%; text-transform: uppercase; }
   .brand-column p { max-width: 26ch; color: var(--muted-foreground); font-size: var(--fs-body); }

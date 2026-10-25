@@ -127,6 +127,32 @@
       max-width: 100%;
     }
   }
+  @media (max-width: 374.98px) {
+    .header-row {
+      gap: calc(var(--gap) / 2);
+    }
+    .header-actions {
+      gap: 4px;
+    }
+    .header-actions :global(.store-icon) {
+      min-width: 2.375rem;
+      min-height: 2.375rem;
+    }
+    .wordmark {
+      white-space: nowrap;
+    }
+    .wordmark-title {
+      font-size: 1.125rem;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .wordmark-subtitle {
+      font-size: 0.5rem;
+      letter-spacing: 0.18em;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+  }
   @media (prefers-reduced-motion: reduce) {
     .store-header,
     .wordmark {

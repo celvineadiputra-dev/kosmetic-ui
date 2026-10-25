@@ -274,6 +274,12 @@
 	list-style: none;
 }
 
+@media (max-width: 374.98px) {
+	.storefront .store-product-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
 .storefront .store-product-grid {
 	--product-rows: 5;
 	row-gap: calc(var(--gap) / 4);

@@ -18,4 +18,14 @@
   .heading-copy { min-width: 0; }
   h2 { color: var(--text); font: 700 var(--fs-title)/1.2 var(--font); letter-spacing: -0.02em; overflow-wrap: anywhere; }
   p { margin-top: calc(var(--gap) / 4); color: var(--muted-foreground); font-size: var(--fs-body); }
+  @media (max-width: 374.98px) {
+    .store-section-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(var(--gap) / 2);
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
 </style>
